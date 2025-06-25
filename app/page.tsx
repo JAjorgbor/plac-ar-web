@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function HomePage() {
   return (
     <>
-      <section className="max-w-7xl mx-auto p-5">
+      <section className="max-w-7xl mx-auto p-5 snap-start">
         {/* hero section */}
         <div className="h-screen  relative">
           <div className="space-y-4 mb-12">
@@ -45,9 +45,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       <DemoSection />
 
-      <section className="max-w-7xl mx-auto relative p-5 my-12 overflow-hidden">
+      <section className="max-w-7xl mx-auto relative p-5 my-12 overflow-hidden snap-start">
         <div className="absolute top-14 left-1/2 w-[300px] transform -translate-x-1/2 text-center space-y-4">
           <h2 className="text-xl">The Platform</h2>
           <h3 className="text-4xl font-semibold uppercase">
@@ -64,8 +65,8 @@ export default function HomePage() {
             Get in Early
           </button>
         </div>
-        <div className="overflow-auto h-screen p-3">
-          <div className="flex justify-between h-screen">
+        <div className="overflow-auto h-screen p-3 snap-y snap-mandatory">
+          <div className="flex justify-between h-screen snap-start">
             <Image
               src="/example.png"
               alt="example"
@@ -81,7 +82,7 @@ export default function HomePage() {
               className="rounded-4xl object-cover h-[70%] mt-auto"
             />
           </div>
-          <div className="flex justify-between h-screen">
+          <div className="flex justify-between h-screen snap-start">
             <Image
               src="/example.png"
               alt="example"
@@ -97,7 +98,7 @@ export default function HomePage() {
               className="rounded-4xl object-cover h-[70%] mt-auto"
             />
           </div>
-          <div className="flex justify-between h-screen">
+          <div className="flex justify-between h-screen snap-start">
             <Image
               src="/example.png"
               alt="example"
@@ -113,7 +114,7 @@ export default function HomePage() {
               className="rounded-4xl object-cover h-[70%] mt-auto"
             />
           </div>
-          <div className="flex justify-between h-screen">
+          <div className="flex justify-between h-screen snap-start">
             <Image
               src="/example.png"
               alt="example"

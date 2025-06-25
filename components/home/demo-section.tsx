@@ -5,12 +5,12 @@ import { useRef } from "react";
 
 const DemoSection = () => {
   const parentRef = useRef(null);
-  const isInView = useInView(parentRef, { once: true });
+  const isInView = useInView(parentRef, { once: true, amount: 0.5 });
   console.log(isInView);
   return (
     <section
       ref={parentRef}
-      className="max-w-7xl relative overflow-hidden mx-auto"
+      className="max-w-7xl relative overflow-hidden mx-auto snap-start"
     >
       <motion.div
         style={{
