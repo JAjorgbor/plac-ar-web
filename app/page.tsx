@@ -64,7 +64,7 @@ export default function HomePage() {
             Get in Early
           </button>
         </div>
-        <div className="overflow-auto max-h-screen p-3">
+        <div className="overflow-auto h-screen p-3">
           <div className="flex justify-between h-screen">
             <Image
               src="/example.png"
