@@ -16,12 +16,13 @@ const DemoSection = forwardRef<HTMLElement>((props, ref) => {
     offset: ["start end", "end start"],
   });
 
+  const appear = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.8, 1]);
   // Animate opacity and y based on scroll
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.9, 1.4]);
   const radius = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    ["100%", "20%", "-10%"]
+    ["100%", "5%", "-10%"]
   );
   // const right = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   // const left = useTransform(
@@ -36,7 +37,7 @@ const DemoSection = forwardRef<HTMLElement>((props, ref) => {
   // );
   const down = useTransform(scrollYProgress, [0, 1], ["-200%", "100%"]);
   return (
-    <section className="max-w-7xl sticky top-0 z-30 overflow-hidden mx-auto bg-white">
+    <section className="max-w-7xl sticky top-0 z-30 overflow-hidden mx-auto ">
       <div className="relative">
         <motion.div
           className="absolute left-1/2 -translate-x-1/2 z-50"
@@ -55,7 +56,7 @@ const DemoSection = forwardRef<HTMLElement>((props, ref) => {
         <motion.div
           style={{
             scale: scale,
-            // opacity: opacity,
+            // opacity: appear,
             borderTopRightRadius: radius,
             borderTopLeftRadius: radius,
             originX: 0.5,
