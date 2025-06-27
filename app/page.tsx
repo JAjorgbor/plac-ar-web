@@ -84,7 +84,7 @@ export default function HomePage() {
                 </motion.div>
                 <motion.div
                   style={{ x: right, opacity }}
-                  className="inline-block bg-[#7EF1EA] min-w-[500px] flex-grow h-[500px] rounded-tl-[100px] border-8 border-[#097a73]"
+                  className="inline-block bg-[#7EF1EA] min-w-[500px] flex-grow h-[500px] rounded-tl-[350px] border-8 border-[#097a73]"
                 />
               </div>
               <motion.div

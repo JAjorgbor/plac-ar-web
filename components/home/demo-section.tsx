@@ -34,7 +34,7 @@ const DemoSection = forwardRef<HTMLElement>((props, ref) => {
   //   [0, 0.5, 1],
   //   ["0%", "-500px", "-100%"]
   // );
-  const down = useTransform(scrollYProgress, [0, 1], ["-100%", "80%"]);
+  const down = useTransform(scrollYProgress, [0, 1], ["-200%", "100%"]);
   return (
     <section className="max-w-7xl sticky top-0 z-30 overflow-hidden mx-auto bg-white">
       <div className="relative">
