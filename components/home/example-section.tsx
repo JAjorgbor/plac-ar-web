@@ -16,12 +16,6 @@ const ExampleSection = forwardRef<HTMLElement>(({}, ref) => {
   });
 
   // Animate opacity and y based on scroll
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.9, 1.4]);
-  const radius = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    ["100%", "5%", "-10%"]
-  );
   const down = useTransform(scrollYProgress, [0, 1], ["-100%", "0%"]);
   return (
     <section className="max-w-7xl mx-auto bg-white z-30 sticky top-0 p-5 my-12 h-screen overflow-hidden">
