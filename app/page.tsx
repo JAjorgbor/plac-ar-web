@@ -99,7 +99,7 @@ export default function HomePage() {
       <DemoSection ref={parentRef} />
       <div className="h-[800vh]" />
 
-      <section className="max-w-7xl mx-auto bg-white z-30 sticky top-0 p-5 my-12 overflow-hidden">
+      {/* <section className="max-w-7xl mx-auto bg-white z-30 sticky top-0 p-5 my-12 overflow-hidden">
         <div className="absolute top-14 left-1/2 w-[300px] transform -translate-x-1/2 text-center space-y-4">
           <h2 className="text-xl">The Platform</h2>
           <h3 className="text-4xl font-semibold uppercase">
@@ -182,7 +182,7 @@ export default function HomePage() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
