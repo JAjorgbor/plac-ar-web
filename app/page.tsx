@@ -1,7 +1,7 @@
 "use client";
 import DemoSection from "@/components/home/demo-section";
 import { motion, useScroll, useTransform } from "motion/react";
-import Image from "next/image";
+// import Image from "next/image";
 import { useRef } from "react";
 
 export default function HomePage() {

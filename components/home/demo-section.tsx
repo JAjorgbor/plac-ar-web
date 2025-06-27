@@ -16,7 +16,6 @@ const DemoSection = forwardRef<HTMLElement>((props, ref) => {
     offset: ["start end", "end start"],
   });
 
-  const appear = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.8, 1]);
   // Animate opacity and y based on scroll
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.9, 1.4]);
   const radius = useTransform(
