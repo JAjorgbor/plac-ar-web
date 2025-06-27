@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 
@@ -9,8 +9,6 @@ const DemoSection = forwardRef<HTMLElement>((props, ref) => {
   // Expose parentRef to parent via the forwarded ref
   useImperativeHandle(ref, () => parentRef.current as HTMLElement);
 
-  const isInView = useInView(parentRef, { once: true, amount: 0.5 });
-  console.log(isInView);
   const { scrollYProgress } = useScroll({
     target: parentRef,
     offset: ["start end", "end start"],
@@ -23,18 +21,7 @@ const DemoSection = forwardRef<HTMLElement>((props, ref) => {
     [0, 0.5, 1],
     ["100%", "5%", "-10%"]
   );
-  // const right = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  // const left = useTransform(
-  //   scrollYProgress,
-  //   [0, 0.5, 1],
-  //   ["0%", "-500px", "-100%"]
-  // );
-  // const up = useTransform(
-  //   scrollYProgress,
-  //   [0, 0.5, 1],
-  //   ["0%", "-500px", "-100%"]
-  // );
-  const down = useTransform(scrollYProgress, [0, 1], ["-200%", "100%"]);
+  const down = useTransform(scrollYProgress, [0,0.5, 1], ["-200%",'10%' ,"100%"]);
   return (
     <section className="max-w-7xl sticky top-0 z-30 overflow-hidden mx-auto ">
       <div className="relative">

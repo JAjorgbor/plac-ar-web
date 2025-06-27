@@ -1,5 +1,7 @@
 "use client";
 import DemoSection from "@/components/home/demo-section";
+import Footer from "@/components/scaffold/footer";
+import ExampleSection from "@/components/home/example-section";
 import { motion, useScroll, useTransform } from "motion/react";
 // import Image from "next/image";
 import { useRef } from "react";
@@ -99,90 +101,9 @@ export default function HomePage() {
       <DemoSection ref={parentRef} />
       <div className="h-[800vh]" />
 
-      {/* <section className="max-w-7xl mx-auto bg-white z-30 sticky top-0 p-5 my-12 overflow-hidden">
-        <div className="absolute top-14 left-1/2 w-[300px] transform -translate-x-1/2 text-center space-y-4">
-          <h2 className="text-xl">The Platform</h2>
-          <h3 className="text-4xl font-semibold uppercase">
-            Created Over 80,000 3D Models
-          </h3>
-          <p>
-            Design personalized, brand-consistent, Interiors without much skill
-            just creativity
-          </p>
-          <button
-            type="button"
-            className="bg-green-900 text-white py-1 px-4 rounded-3xl"
-          >
-            Get in Early
-          </button>
-        </div>
-        <div className="overflow-auto h-screen p-3">
-          <div className="flex justify-between h-screen">
-            <Image
-              src="/example.png"
-              alt="example"
-              height={500}
-              width={300}
-              className="rounded-4xl object-cover h-[70%] mb-auto"
-            />
-            <Image
-              src="/example.png"
-              alt="example"
-              height={500}
-              width={300}
-              className="rounded-4xl object-cover h-[70%] mt-auto"
-            />
-          </div>
-          <div className="flex justify-between h-screen">
-            <Image
-              src="/example.png"
-              alt="example"
-              height={500}
-              width={300}
-              className="rounded-4xl object-cover h-[70%] mb-auto"
-            />
-            <Image
-              src="/example.png"
-              alt="example"
-              height={500}
-              width={300}
-              className="rounded-4xl object-cover h-[70%] mt-auto"
-            />
-          </div>
-          <div className="flex justify-between h-screen">
-            <Image
-              src="/example.png"
-              alt="example"
-              height={500}
-              width={300}
-              className="rounded-4xl object-cover h-[70%] mb-auto"
-            />
-            <Image
-              src="/example.png"
-              alt="example"
-              height={500}
-              width={300}
-              className="rounded-4xl object-cover h-[70%] mt-auto"
-            />
-          </div>
-          <div className="flex justify-between h-screen">
-            <Image
-              src="/example.png"
-              alt="example"
-              height={500}
-              width={300}
-              className="rounded-4xl object-cover h-[70%] mb-auto"
-            />
-            <Image
-              src="/example.png"
-              alt="example"
-              height={500}
-              width={300}
-              className="rounded-4xl object-cover h-[70%] mt-auto"
-            />
-          </div>
-        </div>
-      </section> */}
+      <ExampleSection ref={parentRef} />
+      <div className="h-[400vh]" />
+      <Footer />
     </main>
   );
 }
