@@ -72,7 +72,7 @@ export default function HomePage() {
           {/* Shapes */}
           <div className="flex gap-6 items-end absolute w-full top-[10%]">
             <motion.div
-              style={{ x: left, opacity }}
+              style={{ x: rightFast, opacity }}
               className="inline-block h-[250px] w-[150px] rounded-r-[80px] border-8 border-gray-400"
             />
             <div className="flex flex-col gap-6 flex-grow">
