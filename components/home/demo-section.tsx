@@ -21,13 +21,17 @@ const DemoSection = forwardRef<HTMLElement>((props, ref) => {
     [0, 0.5, 1],
     ["100%", "5%", "-10%"]
   );
-  const down = useTransform(scrollYProgress, [0,0.5, 1], ["-200%",'10%' ,"100%"]);
+  const down = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    ["-200%", "10%", "100%"]
+  );
   return (
     <section className="max-w-7xl sticky top-0 z-30 overflow-hidden mx-auto ">
-      <div className="relative">
+      <div className="overflow-y-hidden">
         <motion.div
-          className="absolute left-1/2 -translate-x-1/2 z-50"
-          style={{ y: down }}
+          className=" left-1/2 -translate-x-1/2 z-50"
+          style={{ y: down, position: "absolute" }}
           // initial={{ top: "-100%" }}
           // animate={isInView ? { top: "8%" } : { top: "-100%" }}
           transition={{ ease: "easeInOut" }}

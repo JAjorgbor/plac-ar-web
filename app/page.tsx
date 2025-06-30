@@ -35,13 +35,13 @@ export default function HomePage() {
     [0, 0.5, 1],
     ["0%", "500px", "100%"]
   );
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0, -2]);
   return (
     <main ref={parentRef}>
       <section className="max-w-7xl mx-auto p-5 sticky top-0 overflow-x-hidden">
         {/* hero section */}
         <div className="h-screen  relative">
-          <div className="space-y-4 mb-12">
+          <motion.div style={{ x: left, opacity }} className="space-y-4 mb-12">
             <h1 className="text-4xl font-semibold md:w-1/2">
               Don&rsquo;t just picture the vision &mdash; place it. Real rooms,
               real time, real dope.
@@ -68,7 +68,7 @@ export default function HomePage() {
                 </button>
               </motion.div>
             </div>
-          </div>
+          </motion.div>
           {/* Shapes */}
           <div className="flex gap-6 items-end absolute w-full top-[10%]">
             <motion.div
